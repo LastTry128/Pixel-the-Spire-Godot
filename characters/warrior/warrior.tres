@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=5 format=3 uid="uid://conux5h57etdv"]
+
+[ext_resource type="Script" uid="uid://3mj4442wwgkm" path="res://custom_resources/character_stats.gd" id="1_nliw2"]
+[ext_resource type="Texture2D" uid="uid://cpydvk8mq66o5" path="res://art/tile_0087.png" id="1_xju84"]
+[ext_resource type="Resource" uid="uid://b75m84xx06hb1" path="res://characters/warrior/warrior_draftable_cards.tres" id="2_wgifn"]
+[ext_resource type="Resource" uid="uid://c6a2fvle23cn7" path="res://characters/warrior/warrior_starting_deck.tres" id="3_wgifn"]
+
+[resource]
+script = ExtResource("1_nliw2")
+character_name = "战士"
+description = "能够用斧头劈砍敌人
+更多的生命值"
+portrait = ExtResource("1_xju84")
+starting_deck = ExtResource("3_wgifn")
+draftable_cards = ExtResource("2_wgifn")
+cards_per_turn = 4
+max_mana = 3
+max_health = 35
+art = ExtResource("1_xju84")
+metadata/_custom_type_script = "uid://3mj4442wwgkm"

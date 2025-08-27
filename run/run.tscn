@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=3 uid="uid://c5gwhh4w7xllt"]
+
+[ext_resource type="PackedScene" uid="uid://v023fhww8a0r" path="res://scenes/map/map.tscn" id="1_6y1hf"]
+[ext_resource type="Script" uid="uid://s8f4mqbmxxsu" path="res://run/run.gd" id="1_wkui6"]
+[ext_resource type="Resource" uid="uid://c1hkoo0kwlxta" path="res://run/run_startup.tres" id="2_badgd"]
+[ext_resource type="PackedScene" uid="uid://cdk6q0bp3pfbe" path="res://scenes/ui/card_pile_opener.tscn" id="4_6x33b"]
+[ext_resource type="PackedScene" uid="uid://nquks6qhg0wd" path="res://scenes/ui/gold_ui.tscn" id="4_k8enk"]
+[ext_resource type="PackedScene" uid="uid://dw6ficwulmoef" path="res://scenes/ui/health_ui.tscn" id="4_w508l"]
+[ext_resource type="Texture2D" uid="uid://bc0ciu8ene25v" path="res://art/deck.png" id="5_k8enk"]
+[ext_resource type="PackedScene" uid="uid://gdkphb3rr1sg" path="res://scenes/ui/card_pile_view.tscn" id="6_w508l"]
+
+[node name="Run" type="Node"]
+script = ExtResource("1_wkui6")
+run_startup = ExtResource("2_badgd")
+
+[node name="Map" parent="." instance=ExtResource("1_6y1hf")]
+
+[node name="CurrentView" type="Node" parent="."]
+
+[node name="DebugButtons" type="VBoxContainer" parent="."]
+visible = false
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+alignment = 1
+
+[node name="MapButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Map
+"
+
+[node name="BattleButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Battle"
+
+[node name="ShopButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Shop"
+
+[node name="TreasureButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Treasure
+"
+
+[node name="RewardsButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Rewards
+"
+
+[node name="CampfireButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Campfire
+"
+
+[node name="TopBar" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Background" type="ColorRect" parent="TopBar"]
+custom_minimum_size = Vector2(0, 18)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+color = Color(0.0196078, 0.0196078, 0.0196078, 0.564706)
+
+[node name="BarItems" type="HBoxContainer" parent="TopBar"]
+custom_minimum_size = Vector2(0, 18)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HealthUI" parent="TopBar/BarItems" instance=ExtResource("4_w508l")]
+unique_name_in_owner = true
+layout_mode = 2
+show_max_hp = true
+
+[node name="GoldUI" parent="TopBar/BarItems" instance=ExtResource("4_k8enk")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Placeholder" type="Control" parent="TopBar/BarItems"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeckButton" parent="TopBar/BarItems" node_paths=PackedStringArray("counter") instance=ExtResource("4_6x33b")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture_normal = ExtResource("5_k8enk")
+counter = NodePath("Counter")
+
+[node name="Counter" type="Label" parent="TopBar/BarItems/DeckButton"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 10.0
+offset_right = 8.0
+offset_bottom = 18.0
+text = "9"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeckView" parent="TopBar" instance=ExtResource("6_w508l")]
+unique_name_in_owner = true
+visible = false
