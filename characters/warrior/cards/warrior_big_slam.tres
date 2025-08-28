@@ -11,6 +11,7 @@ type = 0
 rarity = 1
 target = 1
 cost = 2
+exhausts = true
 icon = ExtResource("1_odk1c")
 tooltip_text = "[center]造成[color=\"ff0000\"]10[/color]伤害[/center]
 [center]賦予[color=\"ffdf000\"]2[/color]层易伤[/center]"

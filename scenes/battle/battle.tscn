@@ -65,8 +65,9 @@ stats = ExtResource("8_mvulk")
 position = Vector2(43, 79)
 stats = ExtResource("9_oiw7q")
 
-[node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("hand")]
+[node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("player", "hand")]
 script = ExtResource("6_mxe8n")
+player = NodePath("../Player")
 hand = NodePath("../BattleUI/Hand")
 
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]

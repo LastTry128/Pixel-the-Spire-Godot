@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://3csjnwgenc5b"]
+
+[ext_resource type="Script" uid="uid://colftqhtohlmh" path="res://status_handler/status_handler.gd" id="1_fcejv"]
+
+[node name="StatusHandler" type="GridContainer"]
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 6
+script = ExtResource("1_fcejv")
