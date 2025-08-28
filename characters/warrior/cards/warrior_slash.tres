@@ -11,7 +11,8 @@ type = 0
 rarity = 1
 target = 2
 cost = 2
+exhausts = false
 icon = ExtResource("1_eofgd")
-tooltip_text = "[center]所有敌人造成[color=\"ff0000\"]6[/color]伤害[/center]"
+tooltip_text = "[center]所有敌人造成 [color=\"ff0000\"]%s[/color] 伤害[/center]"
 sound = ExtResource("3_xnxb8")
 metadata/_custom_type_script = "uid://cv3j6lciobfwh"

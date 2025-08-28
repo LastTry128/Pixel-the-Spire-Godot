@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1dx0ukw2plfy"]
+
+[ext_resource type="Script" uid="uid://dwxwfn1dl8y4n" path="res://scenes/ui/status_tooltip.gd" id="1_5okso"]
+[ext_resource type="Texture2D" uid="uid://2egbj0w2asc2" path="res://art/expose.png" id="1_j4lfu"]
+[ext_resource type="Resource" uid="uid://deic2d0brvrao" path="res://status/muscle.tres" id="2_nj0h8"]
+
+[node name="StatusTooltip" type="HBoxContainer"]
+offset_right = 124.0
+offset_bottom = 19.0
+script = ExtResource("1_5okso")
+status = ExtResource("2_nj0h8")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("1_j4lfu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+text = "易伤: 受到伤害量+50%%，还剩%s回合"
+vertical_alignment = 1
+autowrap_mode = 2

@@ -11,7 +11,8 @@ type = 0
 rarity = 0
 target = 1
 cost = 1
+exhausts = false
 icon = ExtResource("1_ungqh")
-tooltip_text = "[center]造成[color=\"ff0000\"]6[/color]伤害[/center]"
+tooltip_text = "[center]造成 [color=\"ff0000\"]%s[/color] 伤害[/center]"
 sound = ExtResource("3_6uoki")
 metadata/_custom_type_script = "uid://cv3j6lciobfwh"
