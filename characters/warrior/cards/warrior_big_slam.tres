@@ -13,7 +13,7 @@ target = 1
 cost = 2
 exhausts = true
 icon = ExtResource("1_odk1c")
-tooltip_text = "[center]造成[color=\"ff0000\"]10[/color]伤害[/center]
-[center]賦予[color=\"ffdf000\"]2[/color]层易伤[/center]"
+tooltip_text = "[center]造成[color=\"ff0000\"]8[/color]伤害[/center]
+[center]賦予[color=\"ffdf00\"]2[/color]层易伤[/center]"
 sound = ExtResource("3_0qbpi")
 metadata/_custom_type_script = "uid://cv3j6lciobfwh"

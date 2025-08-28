@@ -6,9 +6,7 @@ const MUSCLE_STATUS = preload("res://status/muscle.tres")
 var stacks_per_turn := 2
 
 
-func apply_status(target: Node) -> void:
-	print("hello")
-	
+func apply_status(target: Node) -> void:	
 	var status_effect := StatusEffect.new()
 	var muscle := MUSCLE_STATUS.duplicate()
 	muscle.stacks = stacks_per_turn
