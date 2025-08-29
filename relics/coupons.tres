@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Relic" load_steps=2 format=3 uid="uid://beuhocj77ag32"]
+
+[ext_resource type="Script" uid="uid://crdwqk7kna0h0" path="res://custom_resources/relic.gd" id="1_31mc3"]
+
+[resource]
+script = ExtResource("1_31mc3")
+relic_name = "优惠卷"
+id = "coupons"
+type = 4
+character_type = 0
+starter_relic = false
+tooltip = "[color=\"ffdf00\"]优惠卷[/color]
+商店道具打5折"
+metadata/_custom_type_script = "uid://crdwqk7kna0h0"

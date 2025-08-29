@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://crkypk1ifujlw"]
+
+[ext_resource type="Script" uid="uid://f3t6vu75do4m" path="res://relics/healing_potion.gd" id="1_65tca"]
+[ext_resource type="Texture2D" uid="uid://boklhiqs1414d" path="res://art/tile_0115.png" id="1_ifyi4"]
+
+[resource]
+script = ExtResource("1_65tca")
+relic_name = "生命药水"
+id = "healing_potion"
+type = 3
+character_type = 2
+starter_relic = true
+icon = ExtResource("1_ifyi4")
+tooltip = "[color=\"ffdf00\"]生命药水[/color]
+战斗结束后恢复6点生命"
+metadata/_custom_type_script = "uid://crdwqk7kna0h0"
